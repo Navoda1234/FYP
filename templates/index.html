@@ -1,0 +1,79 @@
+<html>
+    <title>Time-lapse video generator</title>
+    <link rel="shortcut icon" type="image/x-icon" href="static/images/flower icon.jpg"/>
+	<head>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" type="text/css" href="../static/css/index.css">
+        <script src="static/js/index.js"></script>
+	</head>
+
+	<body class="body">
+<!--            <h1> Time-lapse video generator </h1><br>-->
+            <div>
+                <div class="page-name">
+                    <img src="static/images/flower icon.jpg">
+                    <div class="name">Flower Time-lapse video generator</div>
+                </div>
+            </div>
+
+        <form class="grid" action="/result" method="POST">
+          {% if name %}
+            <center>
+<!--              <h3 style="color: blue;" class="let_space">Hello {{name}}, How was your day!!</h3>-->
+<!--                <video width="320" height="240" controls>-->
+                  <img src="static\lithops-flower.gif">
+            <!--      <source src="movie.ogg" type="video/ogg">-->
+<!--                  Your browser does not support the video tag.-->
+<!--                </video>-->
+            </center>
+
+          {% endif %}
+          <label for="name">Upload the image:</label>
+<!--          <input type="file" id="name">-->
+              <input type="file"  accept="image/*" name="name" id="name" onchange="loadFile()">
+            <center>
+                <img id="output" />
+            </center>
+            <center>
+                <input class="file_submit" value="Upload" type="Submit" id="submit">
+                <input class="file_remove" value="Remove" type="button" id="remove" onclick="removeInput(output)">
+            </center>
+
+        </form>
+           <form class="grid2" action="/result" method="POST">
+             <label>Instructions:</label>
+            </div>
+
+               <div class="grid-container">
+                  <div class="item1">
+                      <img src="static/images/image browse.png" class="zoom" width="100" height="100">
+                      <br><label>Choose an image <br> of a flower</label>
+                  </div>
+                  <div class="item2">
+                      <img src="static/images/right_arrow-removebg-preview.png" width="50" height="50">
+                  </div>
+                  <div class="item3">
+                      <img src="static/images/upload image.png" class="zoom"  width="100" height="100">
+                      <br><label>Click on the <br>upload button</label>
+                  </div>
+                  <div class="item4">
+                    <img src="static/images/right_arrow-removebg-preview.png" width="50" height="50">
+                  </div>
+                   <div class="item5">
+                      <img src="static/images/video-removebg-preview.png" class="zoom"  width="100" height="100">
+                      <br><label>Get your <br>time-lapse video</label>
+                   </div>
+               </div>
+
+            </form>
+        <br>
+        <br>
+        <br>
+    </body>
+
+
+<footer class="footer">
+    <p>Time-lapse video generating system</p>
+</footer>
+
+</html>
